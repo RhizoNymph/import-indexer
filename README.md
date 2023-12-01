@@ -27,7 +27,7 @@ I digress, I hope someone out there finds this useful. I put it out before integ
 Actual Instructions (*gasp*)
 
 
-You'll need to copy server/.envsample to server/.env and put in your Github personal access token.
+You'll need to copy server/src/.envsample to server/src/.env and put in your Github personal access token.
 
 
 

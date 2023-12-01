@@ -1,0 +1,25 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - 2998:2998
+    environment:
+      - DEBUG=app
+      - CHOKIDAR_USEPOLLING=true
+    links:
+      - server
+  server:
+    build: ./server
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    ports:
+      - 2999:2999
+networks:
+  default:
+    driver: bridge
+    name: import-indexer
